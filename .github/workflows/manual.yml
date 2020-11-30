@@ -30,3 +30,6 @@ jobs:
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Unpickle files
       run: python unpickle.py
+    - uses: EndBug/add-and-commit@v5.2.0
+      with:
+        message: Update benchmark dataset
