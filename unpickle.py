@@ -22,6 +22,7 @@ data = [unpackdata(path) for path in files]
 keyselector = lambda m:(m['name'],m['image_sizes'])
 models = groupby(sorted(data, key=keyselector), key=keyselector)
 
+Path("_data").mkdir(parents=True, exist_ok=True)
 output = [
   ('_data/{0}.json'.format(name),
   {
