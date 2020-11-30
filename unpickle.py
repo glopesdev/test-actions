@@ -23,7 +23,7 @@ keyselector = lambda m:(m['name'],m['image_sizes'])
 models = groupby(sorted(data, key=keyselector), key=keyselector)
 
 output = [
-  ('{0}.json'.format(name),
+  ('_data/{0}.json'.format(name),
   {
     "name": name,
     "image_sizes": image_sizes,
